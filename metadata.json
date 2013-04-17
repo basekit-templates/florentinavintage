@@ -1,8 +1,7 @@
 {
 	"name":"Florentina Vintage",
-	"directory":"florentinavintage",
-	"thumbnail":"/florentinavintage/florentinavintage.jpg",
-	"screenshot":"/florentinavintage/florentinavintage.jpg",
+	"thumbnail":"florentinavintage.jpg",
+	"screenshot":"florentinavintage.jpg",
 	"pageTypes":[],
 	"defaultColorSwatch":"Warmth 2",
 	"defaultFontSwatch":"Old Standard TT"
