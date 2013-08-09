@@ -1,8 +1,133 @@
 {
 	"name":"Florentina Vintage",
-	"thumbnail":"florentinavintage.jpg",
-	"screenshot":"florentinavintage.jpg",
-	"pageTypes":[],
-	"defaultColorSwatch":"Warmth 2",
-	"defaultFontSwatch":"Old Standard TT"
+	"thumbnail":"florentinavintage.png",
+	"screenshot":"florentinavintage.png",
+	"colorSwatches":
+    {
+        "Swatch 1": {
+            "color1":"#ffffff",
+            "color2":"#f3f3f3",
+            "color3":"#f4594f",
+            "color4":"#373737",
+            "color5":"#787878",
+            "color6":"#484848",
+            "color7":"#ffffff"
+        },
+        "Swatch 2": {
+            "color1":"#ffffff",
+            "color2":"#f3f3f3",
+            "color3":"#BA7B33",
+            "color4":"#373737",
+            "color5":"#787878",
+            "color6":"#484848",
+            "color7":"#ffffff"
+        },
+        "Swatch 3": {
+            "color1":"#ffffff",
+            "color2":"#f3f3f3",
+            "color3":"#466178",
+            "color4":"#373737",
+            "color5":"#787878",
+            "color6":"#484848",
+            "color7":"#ffffff"
+        },
+        "Swatch 4": {
+            "color1":"#ffffff",
+            "color2":"#f3f3f3",
+            "color3":"#38AD9E",
+            "color4":"#373737",
+            "color5":"#787878",
+            "color6":"#484848",
+            "color7":"#ffffff"
+        },
+        "Swatch 5": {
+            "color1":"#ffffff",
+            "color2":"#f3f3f3",
+            "color3":"#88759C",
+            "color4":"#373737",
+            "color5":"#787878",
+            "color6":"#484848",
+            "color7":"#ffffff"
+        }
+    },
+    "fontSwatch": {
+       "title": "Old Standard TT",
+        "font1": {
+            "font-family": "Old Standard TT",
+            "font-size": "26px",
+            "font-weight": "400",
+            "line-height": "24px",
+            "color": "@color-swatch6",
+            "letter-spacing": "inherit"
+        },
+        "font2": {
+            "font-family": "Old Standard TT",
+            "font-size": "24px",
+            "font-weight": "inherit",
+            "line-height": "36px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font3": {
+            "font-family": "Old Standard TT",
+            "font-size": "20px",
+            "font-weight": "inherit",
+            "line-height": "34px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font4": {
+            "font-family": "Old Standard TT",
+            "font-size": "18px",
+            "font-weight": "inherit",
+            "line-height": "34px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font5": {
+            "font-family": "Old Standard TT",
+            "font-size": "16px",
+            "font-weight": "400",
+            "line-height": "28px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font6": {
+            "font-family": "Old Standard TT",
+            "font-size": "16px",
+            "font-weight": "400",
+            "line-height": "28px",
+            "color": "@color-swatch6",
+            "color-hover": "@color-swatch3",
+            "letter-spacing": "inherit",
+            "background-color": "@color-swatch1",
+            "background-color-hover": "@color-swatch1"
+        },
+        "font7": {
+            "font-family": "Old Standard TT",
+            "font-size": "20px",
+            "font-weight": "inherit",
+            "line-height": "32px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit",
+            "background-color": "@color-swatch3",
+            "background-color-hover": "darken(@color-swatch3,5%)"
+        },
+        "font8": {
+            "font-family": "Old Standard TT",
+            "font-size": "36px",
+            "font-weight": "400",
+            "line-height": "42px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit"
+        },
+        "font9": {
+            "font-family": "Old Standard TT",
+            "font-size": "22px",
+            "font-weight": "400",
+            "line-height": "36px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit"
+        }
+    }
 }
