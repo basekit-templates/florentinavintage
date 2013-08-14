@@ -54,7 +54,7 @@
        "title": "Old Standard TT",
         "font1": {
             "font-family": "Old Standard TT",
-            "font-size": "26px",
+            "font-size": "28px",
             "font-weight": "400",
             "line-height": "24px",
             "color": "@color-swatch6",
@@ -62,7 +62,7 @@
         },
         "font2": {
             "font-family": "Old Standard TT",
-            "font-size": "24px",
+            "font-size": "26px",
             "font-weight": "inherit",
             "line-height": "36px",
             "color": "@color-swatch4",
@@ -70,7 +70,7 @@
         },
         "font3": {
             "font-family": "Old Standard TT",
-            "font-size": "20px",
+            "font-size": "23px",
             "font-weight": "inherit",
             "line-height": "34px",
             "color": "@color-swatch4",
@@ -78,7 +78,7 @@
         },
         "font4": {
             "font-family": "Old Standard TT",
-            "font-size": "18px",
+            "font-size": "20px",
             "font-weight": "inherit",
             "line-height": "34px",
             "color": "@color-swatch4",
@@ -127,6 +127,14 @@
             "font-weight": "400",
             "line-height": "36px",
             "color": "@color-swatch1",
+            "letter-spacing": "inherit"
+        },
+        "font10": {
+            "font-family": "Old Standard TT",
+            "font-size": "30px",
+            "font-weight": "400",
+            "line-height": "24px",
+            "color": "@color-swatch6",
             "letter-spacing": "inherit"
         }
     }
