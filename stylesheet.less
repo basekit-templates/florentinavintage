@@ -151,7 +151,6 @@ list-style-type: square;
 
 .bk-pt-default .extendednavigation ul li:hover > ul {
   border: 1px solid darken(@color-swatch2,5%);
-  border-top: 0;
 }
 
 
@@ -1054,7 +1053,6 @@ hr.line.align-right {
 .widget.twitter .twitter-profile-pic {
     float: left;
     margin-right: 20px;
-    height: 110px;
 }
 
 .widget.twitter .twitter-profile-pic img {
@@ -1107,6 +1105,7 @@ hr.line.align-right {
     text-indent: 8px;
     margin-top: 6px;
     margin-bottom: 30px;
+    padding: 0;
 }
 
 .widget.contactform fieldset textarea {
@@ -1121,6 +1120,7 @@ hr.line.align-right {
     margin-top: 6px;
     margin-bottom: 20px;
     resize: none;
+    padding: 0;
 }
 
 .widget.contactform fieldset button.btn {
@@ -1493,9 +1493,10 @@ footer .widget.profile .twitter span {
 
 
  span.bk-socialicons-twitter a {
-    background-image: image('/images/socialicons-twitter.png');
+    background-image: image('/images/socialicons-twitter.svg');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 22px;
 }
 
  span.bk-socialicons-twitter a:hover {
@@ -1504,9 +1505,10 @@ footer .widget.profile .twitter span {
 
 
  span.bk-socialicons-linkedin a {
-    background-image: image('/images/socialicons-linkedin.png');
+    background-image: image('/images/socialicons-linkedin.svg');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 22px;
 }
  span.bk-socialicons-linkedin a:hover {
   background-color: #007bb6;
@@ -1514,9 +1516,10 @@ footer .widget.profile .twitter span {
 
 
  span.bk-socialicons-facebook a {
-    background-image: image('/images/socialicons-facebook.png');
+    background-image: image('/images/socialicons-facebook.svg');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 22px;
 }
 
  span.bk-socialicons-facebook a:hover {
@@ -1524,9 +1527,10 @@ footer .widget.profile .twitter span {
 }
 
  span.bk-socialicons-rss a {
-    background-image: image('/images/socialicons-rssfeed.png');
+    background-image: image('/images/socialicons-rss.svg');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 22px;
 }
 
  span.bk-socialicons-rss a:hover {
@@ -1534,9 +1538,10 @@ footer .widget.profile .twitter span {
 }
 
  span.bk-socialicons-googleplus a {
-    background-image: image('/images/socialicons-googleplus.png');
+    background-image: image('/images/socialicons-googleplus.svg');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 22px;
 }
 
  span.bk-socialicons-googleplus a:hover {
@@ -1544,9 +1549,10 @@ footer .widget.profile .twitter span {
 }
 
  span.bk-socialicons-youtube a {
-    background-image: image('/images/socialicons-youtube.png');
+    background-image: image('/images/socialicons-youtube.svg');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 22px;
 }
 
  span.bk-socialicons-youtube a:hover {
@@ -1556,6 +1562,19 @@ footer .widget.profile .twitter span {
 /* ===============================
    SLIDESHOW WIDGET
    =============================== */
+
+
+.widget.responsiveslideshow .slideshow-image-list {
+    height: 500px;
+}
+
+.widget.responsiveslideshow .slideshow-widget {
+    background-color: transparent;
+}
+.widget.responsiveslideshow span.inner img {
+    width:100%;
+    height:auto;
+}
 
 .widget.responsiveslideshow .slideshow-widget .btn-prev, .widget.responsiveslideshow .slideshow-widget .btn-next
 {
@@ -1568,31 +1587,28 @@ footer .widget.profile .twitter span {
   text-indent: -99999px;  
 }
 
-.widget.responsiveslideshow .slideshow-widget .btn-prev
-{
-  width: 60px;
-  height: 40px;
-  background: image('/images/slideshow-arrow-left.svg') no-repeat center center;
+.widget.responsiveslideshow .slideshow-widget .btn-prev {
+  left: 10px;
+  background: image('/images/slideshow-arrow-left.svg') no-repeat center left;
+  background-size: contain;
 }
 
-.widget.responsiveslideshow .slideshow-widget .btn-next
-{
-  width: 60px;
-  height: 40px;
-  background: image('/images/slideshow-arrow-right.svg') no-repeat center center; 
-
+.widget.responsiveslideshow .slideshow-widget .btn-next {
+  right: 10px;
+  background: image('/images/slideshow-arrow-right.svg') no-repeat center right; 
+  background-size: contain;   
 }
 
 .widget.responsiveslideshow .slideshow-widget:hover .btn-prev, .widget.responsiveslideshow .slideshow-widget:hover .btn-next
 {
-  top: 50%;
+  top: 40%;
   display: block;
   cursor: pointer;
 }
 
 .widget.responsiveslideshow .slideshow-widget-controls
 {
-  margin-top: 10px;
+  margin-bottom: 10px;
   text-align: center;
 }
 
@@ -1655,23 +1671,30 @@ footer .widget.profile .twitter span {
 }
 
 .widget.responsiveslideshow .content-wrapper {
-  position: relative !important;
-  margin-top:350px;
-  width: 100%;
-  text-align: center;
-  background: rgba(255,255,255,0.6);
-  padding:10px 0;
-  font-family:@font-swatch4-font-family;
-  font-size:@font-swatch4-font-size;
-  font-weight: 600;
-  line-height:@font-swatch4-line-height;
-  color:@font-swatch4-color;
-  letter-spacing: @font-swatch4-letter-spacing;
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    top:auto;
+    background-color: @color-swatch1;
 }
 
-.widget.responsiveslideshow .content-wrapper .description {
-  display: none;
+.widget.responsiveslideshow .title {
+    display: block;
+    font-family:@font-swatch4-font-family;
+    font-size:@font-swatch4-font-size;
+    font-weight: @font-swatch4-font-weight;
+    line-height:@font-swatch4-line-height;
+    color: @font-swatch4-color;
+    letter-spacing: @font-swatch4-letter-spacing;
+    text-align: center;
+    padding-top: 5px;
 }
+
+.widget.responsiveslideshow .description {
+    display: none;
+}
+
 
 
 /* ===============================
@@ -1837,6 +1860,30 @@ footer .widget.profile .twitter span {
       width: 50%;
       padding-bottom: 50%;
   }
+
+     /* Slideshow */
+  .widget.responsiveslideshow .slideshow-image-list {
+      height: 400px;
+  }
+
+
+}
+
+@media only screen and (max-width : 650px) and (min-width : 481px) {
+  
+   /* Tablet view: 2 tiles */
+   .widget.gallery li {
+      width: 50%;
+      padding-bottom: 50%;
+   }
+}
+
+@media only screen and (max-width : 1050px) and (min-width : 651px) {
+   /* Small desktop / ipad view: 3 tiles */
+   .widget.gallery li {
+      width: 33.3%;
+      padding-bottom: 33.3%;
+   }
 
 }
 
@@ -2014,19 +2061,36 @@ blockquote {
   }
 
 
+    /* SLIDESHOW */
+
+
+  .widget.responsiveslideshow .description {
+    display:none;
+  }
+
+  .widget.responsiveslideshow .slideshow-image-list {
+      height: 200px;
+  }
+
+
 
   /* GALLERY */
 
-  .widget.gallery p
-  {
+  .widget.gallery p {
     padding: 10px;
   }
 
-  .widget.gallery ul.gallery-widget li
-  {
-    width: 96%;
+  .widget.gallery ul.gallery-widget li {
+    width: 100%;
+    padding-bottom: 100%;
   }
 
+
+  /* Smartphone view: 1 tile */
+  .widget.gallery li {
+      width: 100%;
+      padding-bottom: 100%;
+  }
 }
 
 @media only screen and (min-width: 1140px) {
