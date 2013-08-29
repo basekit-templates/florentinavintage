@@ -1610,10 +1610,14 @@ footer .widget.profile .twitter span {
   background: image('/images/slideshow-arrow-left.png') no-repeat center left;
 }
 
-.widget.responsiveslideshow .slideshow-widget .btn-next {
+.svg .widget.responsiveslideshow .slideshow-widget .btn-next {
   right: 10px;
   background: image('/images/slideshow-arrow-right.svg') no-repeat center right; 
   background-size: contain;   
+}
+
+.widget.responsiveslideshow .slideshow-widget .btn-next {
+  background: image('/images/slideshow-arrow-right.png') no-repeat center right;  
 }
 
 .widget.responsiveslideshow .slideshow-widget:hover .btn-prev, .widget.responsiveslideshow .slideshow-widget:hover .btn-next
@@ -1640,7 +1644,8 @@ footer .widget.profile .twitter span {
   cursor: pointer;
   z-index: 10;
   background: image('/images/slideshow-play.png') center no-repeat;
-  background-size: 100%;
+  background-size: contain;
+  text-indent: 2000px;
   width: 14%;
   height: 14%;
   top: 43%;
@@ -1655,7 +1660,7 @@ footer .widget.profile .twitter span {
 .widget.responsiveslideshow .slideshow-widget:hover .btn-play.pause
 {
   background: image('/images/slideshow-pause.png') center no-repeat;
-  background-size: 100%;  
+  background-size: contain;  
 }
 
 .widget.responsiveslideshow .slideshow-widget-controls .dot
