@@ -311,6 +311,7 @@ footer p {
   float: right;
   position: relative;
   background-color: transparent;
+  max-width: 690px;
 }
 
 .widget.extendednavigation ul {
@@ -401,6 +402,7 @@ footer p {
   background-color: @color-swatch1;
   z-index: 500;
   margin-top: 0;
+  margin-left: 5%;
 }
 
 .widget.extendednavigation li:hover > ul > li {
@@ -522,6 +524,7 @@ footer p {
   font-size: @font-swatch7-font-size;
   background-color: @font-swatch7-background-color;
   color: @font-swatch7-color;
+  line-height: @font-swatch7-line-height;
   text-decoration: none;
   letter-spacing: 1px;
   text-shadow: 0 1px 0px rgba(0,0,0,0.3);
@@ -623,7 +626,7 @@ footer p {
 
 .widget.button button
 {
-  padding: 4px 8px;
+  padding: 12px 10px 10px;
   border: none;
   -webkit-box-shadow: 3px 3px 0px rgba(50, 50, 50, 0.5);
   -moz-box-shadow: 3px 3px 0px rgba(50, 50, 50, 0.5);
@@ -632,6 +635,7 @@ footer p {
   font-size: @font-swatch7-font-size;
   font-weight:@font-swatch7-font-weight;
   background-color: @font-swatch7-background-color;
+  line-height: @font-swatch7-line-height;
   color: @font-swatch7-color;
   text-decoration: none;
   letter-spacing: 1px;
@@ -729,7 +733,6 @@ footer p {
 {
     display:block;
     max-width: 100%;
-    margin: 0 auto;
     border: 0;
     border-width: 0;
 }
@@ -745,7 +748,6 @@ footer p {
     font-size: @font-swatch4-font-size;
     color:  @font-swatch4-color;
     text-decoration: none;
-    text-align: center;
     text-transform: uppercase;
     line-height: @font-swatch4-line-height;
 }
@@ -761,7 +763,6 @@ footer p {
 .widget.image span.image-description {
     display: block;
     margin:0 0 10px;
-    text-align: center;
     font-family: @font-swatch5-font-family;
     font-weight: @font-swatch5-font-weight;
     font-size: @font-swatch5-font-size;
@@ -1103,7 +1104,7 @@ hr.line.align-right {
 }
 
 .widget.contactform fieldset button.btn {
-    padding: 4px 8px;
+    padding: 12px 10px 10px;
     margin: 0;
     border: none;
     -webkit-box-shadow: 3px 3px 0px rgba(50, 50, 50, 0.5);
@@ -1114,6 +1115,7 @@ hr.line.align-right {
     font-weight:@font-swatch7-font-weight;
     background-color: @font-swatch7-background-color;
     color: @font-swatch7-color;
+    line-height: @font-swatch7-line-height;
     text-decoration: none;
     letter-spacing: 1px;
     text-shadow: 0 1px 0px rgba(0,0,0,0.3);
@@ -1197,17 +1199,19 @@ hr.line.align-right {
     margin-top: 6px;
     margin-bottom: 20px;
     float:left;
+    padding: 0;
 }
 
 .widget.signupform fieldset button.btn {
-   
-        border: none;
+    padding: 12px 10px 10px;
+    border: none;
     -webkit-box-shadow: 3px 3px 0px rgba(50, 50, 50, 0.5);
     -moz-box-shadow: 3px 3px 0px rgba(50, 50, 50, 0.5);
     box-shadow: 3px 3px 0px rgba(50, 50, 50, 0.5);
     font-family: @font-swatch7-font-family;
     font-size: @font-swatch7-font-size;
     font-weight:@font-swatch7-font-weight;
+    line-height: @font-swatch7-line-height;
     background-color: @font-swatch7-background-color;
     color: @font-swatch7-color;
     text-decoration: none;
@@ -1252,7 +1256,7 @@ hr.line.align-right {
 }
 
 .widget.tweet a {
-  padding: 13px 13px 8px 38px;
+  padding: 12px 10px 10px 38px;
   margin: 0;
   border: none;
   background-image: image('/images/twitter.png');
@@ -1263,11 +1267,12 @@ hr.line.align-right {
   -webkit-box-shadow: 3px 3px 0px rgba(50, 50, 50, 0.5);
   -moz-box-shadow: 3px 3px 0px rgba(50, 50, 50, 0.5);
   box-shadow: 3px 3px 0px rgba(50, 50, 50, 0.5);
-  font-family: @font-swatch2-font-family;
-  font-size:1em;
+  font-family: @font-swatch7-font-family;
+  font-size:@font-swatch7-font-size;
   font-weight:@font-swatch7-font-weight;
+  line-height: @font-swatch7-line-height;
   background-color: #00BDEF;
-  color: @color-swatch1;
+  color: @font-swatch7-color;
   text-decoration: none;
   letter-spacing: 1px;
   text-shadow: 0 1px 0px rgba(0,0,0,0.3);
@@ -1367,7 +1372,8 @@ footer .widget.profile .twitter span {
 
 .widget.profile .bk-profile-socialicons a {
     text-decoration: none;
-    text-indent: -9999px;
+    text-indent: 9999px;
+    white-space: nowrap;
     height: 30px;
     width: 30px;
 }
@@ -1398,7 +1404,8 @@ footer .widget.profile .twitter span {
 
 .widget.socialicons a {
     text-decoration: none;
-    text-indent: -9999px;
+    text-indent: 9999px;
+    white-space: nowrap;
     height: 30px;
     width: 30px;
 }
@@ -1546,10 +1553,11 @@ footer .widget.profile .twitter span {
     margin-top: 6px;
     margin-bottom: 20px;
     float:left;
+    padding: 0;
 }
 
 .widget.profile fieldset button.btn {
-   
+    padding: 12px 10px 10px;
     border: none;
     -webkit-box-shadow: 3px 3px 0px rgba(50, 50, 50, 0.5);
     -moz-box-shadow: 3px 3px 0px rgba(50, 50, 50, 0.5);
@@ -1559,6 +1567,7 @@ footer .widget.profile .twitter span {
     font-weight:@font-swatch7-font-weight;
     background-color: @font-swatch7-background-color;
     color: @font-swatch7-color;
+    line-height: @font-swatch7-line-height;
     text-decoration: none;
     letter-spacing: 1px;
     text-shadow: 0 1px 0px rgba(0,0,0,0.3);
@@ -1769,6 +1778,7 @@ footer .widget.profile .twitter span {
 
   .widget.extendednavigation {
     width: 100%;
+    max-width: 100%;
     padding: 0;
     border-top: 1px solid #dddddd;
   }
@@ -1809,7 +1819,7 @@ footer .widget.profile .twitter span {
   .widget.extendednavigation li:hover > ul {
     width: 28%;
     padding: 0;
-    margin: 8px 0;
+    margin-top: 8px;
   }
 
   .widget.extendednavigation li:hover > ul li {
@@ -1923,6 +1933,7 @@ footer .widget.profile .twitter span {
   /* NAV */
 
   .widget.extendednavigation {
+    max-width: 100%;
     width: 100%;
     border-top: none;
   }
@@ -1949,7 +1960,7 @@ footer .widget.profile .twitter span {
   }
 
   .widget .extendednavigation li:hover {
-    background-color: darken(@color-swatch2,3%);
+    background-color: darken(@color-swatch2,2%);
   }
 
   .widget.extendednavigation ul li.folder {
@@ -2030,8 +2041,9 @@ footer .widget.profile .twitter span {
 
 
   .widget.feature h3 {
-    display: none;
     font-size:bkscale(@font-swatch9-font-size, 0.6);
+    line-height: bkscale(@font-swatch9-line-height,0.6);
+    text-align: center;
   }
 
   .widget.feature .feature-btn {
