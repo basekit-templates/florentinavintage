@@ -94,7 +94,14 @@ blockquote {
   box-shadow: 3px 3px 0px rgba(50, 50, 50, 0.3);  
   padding: 18px;
   quotes:"\201C""\201D""\2018""\2019";
+  font-family:@font-swatch5-font-family;
+  font-size:@font-swatch5-font-size;
+  font-weight:@font-swatch5-font-weight;
+  line-height:@font-swatch5-line-height;
+  color:lighten(@font-swatch5-color,25%);
+  margin: 0;
 }
+
   blockquote:before {
   font-family: georgia;
   color:@color-swatch3;
@@ -106,12 +113,11 @@ blockquote {
 }
   blockquote p {
   display: inline;
-  font-style: italic;
   font-family:@font-swatch5-font-family;
-  font-size:bkscale(@font-swatch5-font-size,1.15);
+  font-size:@font-swatch5-font-size;
   font-weight:@font-swatch5-font-weight;
   line-height:@font-swatch5-line-height;
-  color:@font-swatch5-color;
+  color:lighten(@font-swatch5-color,25%);
   background-color: transparent;
 }
 
@@ -175,7 +181,7 @@ header {
 .widget.companyname {
   display: block;
   float: left;
-  margin-top: 18px;
+  margin-top: 14px;
 }
 
 .companyname a:hover {
@@ -314,6 +320,10 @@ footer p {
   max-width: 690px;
 }
 
+.widget.extendednavigation a.pull {
+  display: none;
+}
+
 .widget.extendednavigation ul {
   float: left;
   padding: 0;
@@ -321,20 +331,22 @@ footer p {
   background-color: @color-swatch1;
 }
 
-.widget.extendednavigation ul.align-center li
-{
+/* ALIGNMENTS */
+
+.widget.extendednavigation ul.align-center li, .widget.extendednavigation ul.align-center li:hover ul li {
   text-align: center;
 }
 
-.widget.extendednavigation ul.align-left li
+.widget.extendednavigation ul.align-left li, .widget.extendednavigation ul.align-left li:hover ul li
 {
   text-align: left;
 }
 
-.widget.extendednavigation ul.align-right li
+.widget.extendednavigation ul.align-right li, .widget.extendednavigation ul.align-right li:hover ul li
 {
   text-align: right;
 }
+
 
 .widget.extendednavigation ul li {
   float: left;
@@ -346,6 +358,9 @@ footer p {
   background-color: none;
 }
 
+
+/* FOLDER */
+
 .widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
   display: block;
   padding: 6px 14px;
@@ -356,7 +371,6 @@ footer p {
   color: @font-swatch6-color;
   line-height:@font-swatch6-line-height;
   letter-spacing: @font-swatch6-letter-spacing;
-  text-align: center;
 }
 
 .widget.extendednavigation ul li.folder .text:hover {
@@ -374,13 +388,14 @@ footer p {
   background-repeat: no-repeat;
   height: 100%;
   cursor: pointer;
+  padding: 0;
 }
 
 .widget.extendednavigation ul li.folder:hover {
   background-image: image('/images/arrow-down-hov.png');
   background-position: right center;
   background-repeat: no-repeat;
- 
+  padding: 0;
 }
 
 .widget.extendednavigation li a:hover {
@@ -389,7 +404,7 @@ footer p {
 
 .widget.extendednavigation li > ul {
   display: none;
-  border: 1px solid @color-swatch5;
+  border: 1px solid darken(@color-swatch2,5%);
   -webkit-box-shadow: 3px 3px 0px rgba(50, 50, 50, 0.5);
   -moz-box-shadow: 3px 3px 0px rgba(50, 50, 50, 0.5);
   box-shadow: 3px 3px 0px rgba(50, 50, 50, 0.5);
@@ -409,7 +424,7 @@ footer p {
   display: block;
   width: 100%;
   text-align: left;
-  border-bottom: 1px solid @color-swatch5;
+  border-bottom: 1px solid darken(@color-swatch2,5%);
 }
 
 .widget.extendednavigation li:hover > ul > li:last-child {
@@ -471,12 +486,8 @@ footer p {
 
 .widget.feature .content {
   height: 500px;
-  vertical-align: bottom !important;
+  vertical-align: bottom;
   padding-bottom: 1em;
-}
-
-.widget.feature .spare {
-    background-color: rgba(0, 0, 0, 0.2);
 }
 
 /* FEATURE TITLE */
@@ -488,7 +499,12 @@ footer p {
   line-height:@font-swatch8-line-height;
   color: @font-swatch8-color;
   letter-spacing: @font-swatch8-letter-spacing;
-  padding: 0.6em 0.5em 0;
+  padding: 0;
+}
+
+.widget.feature h2 span {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0 6px;
 }
 
 /* FEATURE STRAPLINE */
@@ -500,7 +516,12 @@ footer p {
   line-height:@font-swatch9-line-height;
   color: @font-swatch9-color;
   letter-spacing: @font-swatch9-letter-spacing;
-  padding: 0.4em 1em 0;
+  padding: 0;
+}
+
+.widget.feature h3 span {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0 6px;
 }
 
 /* FEATURE BUTTON */
@@ -508,13 +529,11 @@ footer p {
 .widget.feature .feature-btn {
   max-width: 930px;
   display: block;
-  margin: 0 auto;
-  padding: 0.8em 1.3em 1.3em;
 }
 
-.widget.feature button
-{
-  padding: 10px 20px 8px;
+.widget.feature button {
+  margin: 10px 0 8px;
+  padding: 10px 10px 8px;
   border: 0;
   -webkit-box-shadow: 3px 3px 0px rgba(50, 50, 50, 0.5);
   -moz-box-shadow: 3px 3px 0px rgba(50, 50, 50, 0.5);
@@ -531,8 +550,6 @@ footer p {
   text-transform: uppercase;
   font-style: italic;
 }
-
-
 
 .widget.feature button:hover 
 {
@@ -621,8 +638,6 @@ footer p {
 /* ===============================
    BUTTON CSS
    =============================== */
-
-
 
 .widget.button button
 {
@@ -1747,27 +1762,14 @@ footer .widget.profile .twitter span {
     border-bottom: 0;
   }
 
-   header .wrapper {
-    margin: 0 auto;
-    width: 100%;
+  .bk-pt-default header {
+    border-bottom: none;
   }
 
  .companyheader {
     width: 100%;
     display: block;
     margin: 0 auto;
-    text-align: center;
-  }
-
-  .widget.logo {
-    float: none;
-  }
-
-
-  .widget.companyname {
-    text-align: center;
-    float: none;
-   
   }
 
   .widget.companyheader .companyname h1 {
@@ -1780,61 +1782,84 @@ footer .widget.profile .twitter span {
     width: 100%;
     max-width: 100%;
     padding: 0;
-    border-top: 1px solid #dddddd;
+    border-top: 1px solid darken(@color-swatch2,5%);
   }
+
   .widget .extendednavigation {
-    display: table;
-    *display: block;
-    *float: left;
+    display: block;
+    float: left;
     width: 100%;
   }
 
-  .widget .extendednavigation ul {
-    display: table-row;
+   /* NAV ICON */
+
+  .widget .extendednavigation a.pull {
+    display: block;
     width: 100%;
-    float: none!important;
+    position: absolute;
+    top: -5px;
+  }
+
+    .widget .extendednavigation a.pull:after {
+    content:"";
+    background: image('/images/nav-icon.png') no-repeat;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+    top: -50px;
+  }
+
+  /* NAV */
+
+  .widget .extendednavigation ul {
+    width: 100%;
+    display: none;
+    border-top: 1px solid darken(@color-swatch2,5%);
+    padding: 20px 0; 
+    margin: 0;
   }
 
   .widget .extendednavigation li {
-    display: table-cell !important;
-    float: none!important;
-    padding: 0.6em;
-    text-align: center;
+    width: 100%;
+    padding: 0;
   }
 
   .widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
-    margin-left: 0;
+      padding: 12px 0;
+      margin: 0;
   }
 
-  .widget .extendednavigation li:last-child
-   {
-    border-right: 0;
-   }
-
-   .widget .extendednavigation li:first-child
-   {
-    border-left: 0;
-   }
-
-  .widget.extendednavigation li:hover > ul {
-    width: 28%;
-    padding: 0;
-    margin-top: 8px;
+  .widget.extendednavigation ul li .text, .widget.extendednavigation ul li.folder .text {
+      padding-left: 20px;
+      background-image: image('/images/square.png');
+      background-position: left center;
+      background-repeat: no-repeat;
   }
 
-  .widget.extendednavigation li:hover > ul li {
-    display: block!important;
-    border: 0!important;
-    padding: .2em 0;
+  .widget.extendednavigation ul li > ul {
+      display: none!important;
   }
 
-  .widget.extendednavigation li:hover > ul > li {
-    border-bottom: 1px solid @color-swatch5 !important;
+  .widget.extendednavigation ul li:hover > ul {
+      display: block!important;
+      width: 100%;
+      border: 1px solid darken(@color-swatch2,5%);
+      margin: 0;
+      padding: 0;
   }
 
-   .widget.extendednavigation ul li:hover > ul li.folder .text {
-    margin-left: 0;
+  .widget.extendednavigation ul li:hover > ul li {
+      padding: 0;
   }
+
+ .widget.extendednavigation ul li:hover > ul li .text, .widget.extendednavigation ul li:hover > ul li.folder .text {
+      background-image: image('/images/square.png');
+      background-position: left center;
+      background-repeat: no-repeat;
+  }
+
 
   /* EXTENDED NAVIGATION - INSIDE ZONE */
 
@@ -1844,10 +1869,6 @@ footer .widget.profile .twitter span {
 
   .main .widget.extendednavigation ul {
     margin: 0;
-  }
-
-  .widget.extendednavigation ul li a {
-    padding: 10px 0;
   }
 
 
@@ -1870,20 +1891,28 @@ footer .widget.profile .twitter span {
 
   .widget.feature .content {
     height: 300px;
+    padding: 0;
     /*padding: 3em 0;*/
   }
 
   .widget.feature h2 {
     font-size:bkscale(@font-swatch8-font-size, 0.84);
+    line-height: bkscale(@font-swatch8-line-height,0.84);
   }
 
   .widget.feature h3 {
     font-size:bkscale(@font-swatch9-font-size, 0.8);
+    line-height: bkscale(@font-swatch8-line-height,0.55);
   }
+
+  .widget.feature button {
+  margin: 8px 0 12px;
+  padding: 10px 10px 8px;
+}
 
   .widget.feature .feature-btn {
     max-width: 648px;
-    padding: 0.8em 1.5em 1.4em;
+    padding: 0;
   }
 
 
@@ -1926,100 +1955,19 @@ footer .widget.profile .twitter span {
 @media only screen and (max-width: 480px) {
 
   /* COMPANY HEADER */
-  .widget.companyheader .company-name h1 {
-    font-size:bkscale(@font-swatch1-font-size, 0.8);
+  .widget.companyname a {
+    font-size:bkscale(@font-swatch1-font-size, 0.65);
   }
 
-  /* NAV */
-
-  .widget.extendednavigation {
-    max-width: 100%;
-    width: 100%;
-    border-top: none;
-  }
-  .widget .extendednavigation {
-    display: block;
-    width: 100%;
+  .widget.companyname {
+    max-width: 210px;
   }
 
-  .widget .extendednavigation ul {
-    display: block;
-    width: 100%;
-    float: left;
-    margin: 0;
-    border-top: 4px solid darken(@color-swatch2,2%);
-
-  }
-
-  .widget .extendednavigation li {
-    display: block!important;
-    width: 100%;
-    background-color: @color-swatch1;
-    border-bottom: 4px solid darken(@color-swatch2,2%);
-    padding: 0;
-  }
-
-  .widget .extendednavigation li:hover {
-    background-color: darken(@color-swatch2,2%);
-  }
-
-  .widget.extendednavigation ul li.folder {
-    padding: 0;
-  }
-
-  .widget .extendednavigation ul li a {
-    border-left: 0;
-    border-right: 0;
-    padding: 1.4em 1em;
-  }
-
-  .widget.extendednavigation ul li.folder .text {
-    padding: 1.4em 1em;
-    margin-left: 0;
-  }
-
-  .widget .extendednavigation ul li:last-child {
-    border: 0;
-  }
-
-  .widget.extendednavigation li:hover > ul {
-    padding: 0;
-    margin: 0 2.5% 0;
-    width: 95%;
-  }
-
-  .widget.extendednavigation li:hover > ul li {
-    display: block!important;
-    margin-bottom: 0;
-    text-align: center;
-    padding: 0;
-  }
-
-  .widget.extendednavigation li:hover > ul > li > a {
-    padding: 0;
-  }
-
-  .widget.extendednavigation ul li:hover > ul li:first-child {
-    padding-top: 0;
-  }
-  
-  /* UL ALIGN RIGHT */
-  .widget.extendednavigation ul.align-right li:hover ul li {
-    text-align: right;
-  }
+    /* UL ALIGN RIGHT */
 
   .widget.extendednavigation ul.align-right li.folder {
     background-position: 12px center;
-  }
-
-  /* UL ALIGN CENTER */
-  .widget.extendednavigation ul.align-left li:hover ul li {
-    text-align: center;
-  }
-
-  /* UL ALIGN LEFT */
-  .widget.extendednavigation ul.align-left li:hover ul li {
-    text-align: left;
+    padding-right: 0;
   }
 
   /* FEATURE */
@@ -2039,21 +1987,19 @@ footer .widget.profile .twitter span {
     line-height: 30px;
   }
 
-
   .widget.feature h3 {
-    font-size:bkscale(@font-swatch9-font-size, 0.6);
-    line-height: bkscale(@font-swatch9-line-height,0.6);
+    font-size:bkscale(@font-swatch9-font-size, 0.8);
+    line-height: bkscale(@font-swatch9-line-height,0.8);
     text-align: center;
   }
 
   .widget.feature .feature-btn {
     text-align: center;
-    padding: 0.4em 1.3em 0.9em;
-
   }
 
  .widget.feature button {
-  padding: 10px 15px;
+  padding: 10px 13px;
+  font-size: bkscale(@font-swatch7-font-size,0.9);
  }
 
 
