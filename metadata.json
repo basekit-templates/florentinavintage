@@ -2,6 +2,11 @@
 	"name":"Florentina Vintage",
 	"thumbnail":"florentinavintage.png",
 	"screenshot":"florentinavintage.png",
+    "tags": {
+    "en": ["colorful", "bright", "modeling", "vintage", "colourful"],
+    "es": ["colorido", "claro", "glamour", "vintage", "colorido"],
+    "br": ["colorido", "claro", "feminino", "vintage", "colorido"]
+    },
 	"colorSwatches":
     {
         "Swatch 1": {
