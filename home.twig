@@ -2,7 +2,6 @@
 
 {% block content %}
 
-<div class="bk-pt-default">
 
  <header>
    <div class="wrapper clearfix">
@@ -14,8 +13,12 @@
     </div>
 </header>
 
+<section>
+  {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"MAURIS ERAT","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
+</section>
+
 <div class="main wrapper clearfix">
-    {{zone('main')|raw}}
+  {{zone('main')|raw}}
 </div>  
 
 <footer>
@@ -26,13 +29,12 @@
                 {{widget('profile', 'footercolumn1profileaddress', { 'profileType':'address', 'address':'profile'})|raw}}
            </div>
            <div class="column columns-two-right">
-                {{widget('content', 'footercolumn2content1', {"content":"<h3>VIVAMUS TEMPUS</h3>"})|raw}}
-                {{widget('profile', 'footercolumn2socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
+              {{widget('content', 'footercolumn2content1', {"content":"<h3>VIVAMUS TEMPUS</h3>"})|raw}}
+              {{widget('profile', 'footercolumn2socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
            </div>
         </div>
     </div>
 </footer>
 
-</div>
 
 {% endblock %}
