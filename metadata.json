@@ -3,9 +3,9 @@
 	"thumbnail":"florentinavintage.png",
 	"screenshot":"florentinavintage.png",
     "tags": {
-    "en": ["colorful", "bright", "modeling", "vintage", "colourful"],
-    "es": ["colorido", "claro", "glamour", "vintage"],
-    "br": ["colorido", "claro", "feminino", "vintage"]
+    "en": ["colorful", "bright", "modeling", "vintage", "colourful", "retail", "retro", "pattern", "texture", "hipster", "creative", "serif"],
+    "es": ["colorido", "claro", "glamour", "vintage", "minorista", "retro", "patron", "textura", "hipster", "creativo", "serif"],
+    "br": ["colorido", "claro", "feminino", "vintage", "varejo", "retrô", "padrão", "textura", "hipster", "criativo", "serif"]
     },
 	"colorSwatches":
     {
