@@ -1,3 +1,15 @@
+/* ===============================
+   IMPORT CSS
+   =============================== */
+
+   @import templatecommon('/paypal.less'); 
+   @import templatecommon('/dropbox.less');
+
+
+/* ===============================
+   TEMPLATE CSS
+   =============================== */
+
 body {
   background-color: @color-swatch1;
   background-image: image('/images/texture2.png');
@@ -1276,6 +1288,18 @@ hr.line.align-right {
   color:@font-swatch5-color;
   letter-spacing: @font-swatch5-letter-spacing;
 
+}
+
+   /* ===============================
+   DROPBOX WIDGET
+   =============================== */
+
+ .widget.dropbox .b-wrap .btn {
+ text-shadow: 0 1px 0px rgba(0,0,0,0.3);
+ -webkit-box-shadow: 3px 3px 0px rgba(50, 50, 50, 0.5);
+ -moz-box-shadow: 3px 3px 0px rgba(50, 50, 50, 0.5);
+ box-shadow: 3px 3px 0px rgba(50, 50, 50, 0.5);
+ text-transform:uppercase;
 }
 
 
