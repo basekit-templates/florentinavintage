@@ -1,4 +1,6 @@
 @import templatecommon('/paypal.less');
+@import templatecommon('/dropbox.less');
+
 
 body {
   background-color: @color-swatch1;
@@ -638,17 +640,25 @@ footer ul, footer ol, footer li {
 }
 
 /* ===============================
-   PAYPAL BUTTON
+   PAYPAL & DROPBOX BUTTON
    =============================== */
 
 
-.widget.paypalbuynow .widget.button.paypal {
-   -webkit-box-shadow: 3px 3px 0px rgba(50, 50, 50, 0.5);
+.widget.paypalbuynow .widget.button.paypal, .widget.dropbox .b-wrap .btn {
+  -webkit-box-shadow: 3px 3px 0px rgba(50, 50, 50, 0.5);
   -moz-box-shadow: 3px 3px 0px rgba(50, 50, 50, 0.5);
   box-shadow: 3px 3px 0px rgba(50, 50, 50, 0.5);
   font-style: italic;
   text-transform: uppercase;
   text-shadow: 0 1px 0px rgba(0,0,0,0.3);
+  font-family: @font-swatch7-font-family;
+  font-size: @font-swatch7-font-size;
+  font-weight:@font-swatch7-font-weight;
+  background-color: @font-swatch7-background-color;
+  line-height: @font-swatch7-line-height;
+  color: @font-swatch7-color;
+  padding: 12px 10px 10px 38px;
+  border: none;
 }
 
 
@@ -1329,7 +1339,7 @@ hr.line.align-right {
 }
 
 .widget.tweet a:hover, .tweet a:active {
-  padding: 13px 13px 8px 38px;
+  padding: 12px 10px 10px 38px;
   background-image: image('/images/twitter.png');
   background-repeat: no-repeat;
   background-position: 13px 16px;
