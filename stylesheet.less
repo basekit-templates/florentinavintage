@@ -262,48 +262,45 @@ list-style-type: square;
    =============================== */
 
 .widget.extendednavigation {
-  float: right;
-  position: relative;
-  background-color: transparent;
-  width: 50%;
+    float: right;
+    position: relative;
+    width: 70%;
+    @media @tablet {
+        width: 100%;
+        float: none;
+    }
+}
+
+.widget.extendednavigation a.pull {
+  top: -26px;
   @media @tablet {
-    float: none;
+    top: 10px;
   }
 }
 
-.widget.extendednavigation ul {
-  padding: 0;
-  margin: 32px 0 0;
-  background-color: @color-swatch1;
+.widget.extendednavigation ul.open {
+    @media @tablet {
+        margin-top: 20px;
+    }
 }
 
-.widget.extendednavigation ul li {
-  float: left;
-  display: block;
+.extendednavigation li.selected {
+    a, .text {
+        color: @color-swatch3;
+    }
 }
-
-.widget.extendednavigation ul li:hover {
-  color: @font-swatch6-color;
-  background-color: none;
-}
-
-
-/* FOLDER */
 
 .widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
   display: block;
   padding: 6px 14px;
   margin-left: 30px;
   font-family:@font-swatch6-font-family;
-  font-size:(@font-swatch6-font-size * 1.2);
+  font-size:@font-swatch6-font-size;
   font-weight: @font-swatch6-font-weight;
   color: @font-swatch6-color;
   line-height:@font-swatch6-line-height;
   letter-spacing: @font-swatch6-letter-spacing;
-}
-
-.widget.extendednavigation ul li.folder .text:hover {
-  color: @font-swatch6-color-hover;
+  
 }
 
 .widget.extendednavigation ul li a:hover {
@@ -311,32 +308,17 @@ list-style-type: square;
 }
 
 .widget.extendednavigation ul li.folder {
-  padding-right: 15px;
-  background-image: image('/images/arrow-down.png');
-  background-position: right center;
   background-repeat: no-repeat;
   height: 100%;
   cursor: pointer;
-  padding: 0;
-}
-
-.widget.extendednavigation ul li.folder:hover {
-  background-image: image('/images/arrow-down-hov.png');
-  background-position: right center;
-  background-repeat: no-repeat;
-  padding: 0;
 }
 
 .widget.extendednavigation li a:hover {
-  color: @font-swatch6-color-hover;
+  color: @color-swatch3;
 }
 
 .widget.extendednavigation li > ul {
   display: none;
-  border: 1px solid darken(@color-swatch2,5%);
-  -webkit-box-shadow: 3px 3px 0px rgba(50, 50, 50, 0.5);
-  -moz-box-shadow: 3px 3px 0px rgba(50, 50, 50, 0.5);
-  box-shadow: 3px 3px 0px rgba(50, 50, 50, 0.5);
 }
 
 .widget.extendednavigation li:hover > ul {
@@ -344,40 +326,46 @@ list-style-type: square;
   width: 186px;
   position: absolute;
   background-color: @color-swatch1;
+  border: 1px solid @color-swatch2;
   z-index: 500;
+  padding: 10px 0;
+  margin-left: 1.1em;
   margin-top: 0;
-  margin-left: 5%;
 }
 
 .widget.extendednavigation li:hover > ul > li {
   display: block;
   width: 100%;
-  text-align: left;
-  border-bottom: 1px solid darken(@color-swatch2,5%);
 }
 
-.widget.extendednavigation li:hover > ul > li:last-child {
-  border-bottom: none;
-}
-
-.widget.extendednavigation li:hover > ul > li > a {
+.widget.extendednavigation li:hover > ul li a {
   display: block;
   background-image: none;
-  color: @font-swatch6-color;
-  padding: 0 14px;
+  color: @color-swatch5;
+  padding: 0 ;
   margin-left: 0;
 }
 
 .widget.extendednavigation li:hover > ul > li > a .text {
   margin-left: 0;
+  
+}
+
+.widget.extendednavigation li:hover > ul > li > a .text:hover {
+  color: @color-swatch3;
 }
 
 .widget.extendednavigation li:hover > ul > li > a:hover {
-  color: @font-swatch6-color-hover;
+  color: @color-swatch3;
+}
+
+.widget.extendednavigation ul li a:hover, .widget.extendednavigation ul li.folder .text:hover {
+ color: @color-swatch3;
 }
 
 .widget .extendednavigation ul li.folder:after {
-    display: none;
+    top: 45%;
+    right: 1px;
 }
 
 
@@ -1766,63 +1754,39 @@ width: 100%;
 
   /* NAV */
 
-  .widget.extendednavigation {
-    width: 100%;
-    max-width: 100%;
-    padding: 0;
-    border-top: 1px solid darken(@color-swatch2,5%);
-  }
-
-  .widget .extendednavigation {
-    display: block;
-    float: left;
-    width: 100%;
-  }
-
-   /* NAV ICON */
-
-  .widget .extendednavigation a.pull {
-    display: block;
-    width: 100%;
-    position: absolute;
-    top: 30px;
-  }
-
-    .widget .extendednavigation a.pull:after {
-    content:"";
-    background: image('/images/nav-icon.png') no-repeat;
-    width: 30px;
-    height: 30px;
-    display: inline-block;
-    position: absolute;
-    right: 15px;
-    top: 0px;
-    box-shadow: none;
-  }
-
-  #page-zones__template-widgets__extendednavigation-navigationheader {
-    overflow: visible;
-  }
-
-  /* NAV */
-
-  .widget .extendednavigation ul {
-    width: 100%;
-    display: none;
-    border-top: 1px solid darken(@color-swatch2,5%);
-    padding: 0; 
-    margin: 0;
-  }
-.widget.extendednavigation ul li, .widget.extendednavigation ul li.folder, .widget.extendednavigation ul li.folder:hover {
-  padding: 0.3em 0;
+    
+.widget .extendednavigation ul {
+    border-top: 1px solid @color-swatch2;
+    padding-top: 0;
 }
 
+.widget .extendednavigation ul.align-right li.folder {
+    background-position: left center;
+    &:after {
+        right: inherit;
+    }
+}
 
-  .widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
-      padding: 12px 0;
-      margin: 0;
+  .widget.extendednavigation ul li {
+      border-bottom: 1px solid @color-swatch2;
+      padding: 0;
+      &:last-child {
+        border-bottom: 0;
+      }
   }
 
+  .widget.extendednavigation ul li:hover .text {
+    color: @color-swatch3;
+  }
+
+  .widget.extendednavigation ul li:hover {
+    border-bottom: 1px solid @color-swatch2;
+  }
+
+  .widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
+      padding: 10px 0;
+      margin: 0;
+  }
 
   .widget.extendednavigation ul li > ul {
       display: none!important;
@@ -1831,25 +1795,34 @@ width: 100%;
   .widget.extendednavigation ul li:hover > ul {
       display: block!important;
       width: 100%;
-      border: 1px solid darken(@color-swatch2,5%);
+      padding: 0 10px;
       margin: 0;
-      padding: 0;
   }
 
-  .widget.extendednavigation ul li:hover > ul li {
-      padding: 0;
+  .widget.extendednavigation ul li:hover > ul > li {
+    border-bottom: none;
   }
 
-
-
-  /* EXTENDED NAVIGATION - INSIDE ZONE */
-
-  .main .widget.extendednavigation {
-   border-top: 0;
+  .widget.extendednavigation ul li:hover > ul > li .text {
+    color: @color-swatch5;
   }
 
-  .main .widget.extendednavigation ul {
-    margin: 0;
+  .widget.extendednavigation ul li:hover > ul > li:hover .text {
+    color: @color-swatch3;
+  }
+
+  .widget.extendednavigation ul li.folder {
+    border-radius: 0;
+  }
+
+  .widget.extendednavigation ul li:hover > ul li:first-child {
+    border-top: none;
+  }
+
+  .widget.feature .feature-bgimg .content button {
+      font-size: .8em;
+      padding: 10px 14px;
+
   }
 
 
