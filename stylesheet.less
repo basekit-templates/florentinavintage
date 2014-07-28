@@ -123,69 +123,16 @@ list-style-type: square;
 
 /* COMPANY NAME */
 
-.widget.companyname {
-  display: block;
-  float: left;
-  margin-top: 14px;
-  width: 250px;
-}
-
-.companyname a:hover {
-  text-decoration: none;
-}
-
-.widget.companyname a {
-  font-family:@font-swatch10-font-family;
-  font-weight: @font-swatch10-font-weight;
-  color: @font-swatch10-color;
-  line-height:@font-swatch10-line-height;
-  letter-spacing: @font-swatch10-letter-spacing;
-  font-size: @font-swatch10-font-size;
-  background-color: @color-swatch1;
+// Logo & Company Name
+.widget.logo, .widget.companyname {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 /* LOGO */
 
 .widget.logo {
-  display: block;
   margin-right: 10px;
-  float: left;
-}
-
-
-.widget.companyheader {
-  float: left;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-
-
-.widget.companyheader:before,
-.widget.companyheader:after {
-  content: " ";
-  display: table;
-}
-
-.widget.companyheader:after {
-  clear: both;
-}
-
-.widget.companyheader {
-  *zoom: 1;
-}
-
-.widget.companyheader .logo img {
-  max-width: 100%;
-  height: auto;
-}
-
-.widget.companyheader .logo-bottom {
-  display: none;
-}
-
-.widget.companyheader .company-name {
-  display: block;
-  margin-top: 6px;
 }
 
 /* ===============================
