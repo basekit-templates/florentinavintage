@@ -127,6 +127,7 @@ list-style-type: square;
   display: block;
   float: left;
   margin-top: 14px;
+  width: 250px;
 }
 
 .companyname a:hover {
@@ -264,7 +265,9 @@ list-style-type: square;
   float: right;
   position: relative;
   background-color: transparent;
-  width: 70%;
+  max-width: 600px;
+    @media (max-width: 915px) {
+        max-width: 100%;
 }
 
 .widget.extendednavigation a.pull {
@@ -842,15 +845,41 @@ hr.line.align-right {
    =============================== */
 
 
+
 .widget.twitter {
+  padding: 30px;
+  margin: 0;
+  background-color: @color-swatch1;
+  border: 1px solid darken(@color-swatch1,10%);
+}
+
+.twitter div.twitter-profile-pic a,
+div.twitter-profile-pic {
+  line-height: 0;
+}
+
+.widget.twitter p {
+  font-size: 14px;
+  line-height: 1.6em;
+  margin-top: 20px;
+}
+
+.widget.twitter a {
+   color: @color-swatch4;
+   text-decoration: none;
+}
+
+.widget.twitter span a {
+  border-bottom: 0;
+  font-size: 11px;
+  color: @color-swatch3;
 }
 
 .widget.twitter a:hover {
-    text-decoration: underline;
 }
 
 .widget.twitter ul {
-    padding: 20px 0;
+    padding: 0px;
     margin: 0;
 }
 
@@ -858,22 +887,13 @@ hr.line.align-right {
     border-bottom: none;
     list-style: none;
     font-family: @font-swatch5-font-family;
-    font-size: @font-swatch5-font-size;
+    font-size: .6em;
     color: @font-swatch5-color;
-    padding: 30px 0;
-    border-bottom: 1px solid #ebebeb;
-}
-
-.widget.twitter ul li p {
-  padding: 0;
-}
-
-.widget.twitter ul li:first-child {
-    border-top: 1px solid #ebebeb;
+    padding-bottom: 30px;
 }
 
 .widget.twitter ul li:last-child {
-    padding-bottom: 30px;
+    padding-bottom: 0px;
 }
 
 .widget.twitter .twitter-profile-pic {
@@ -881,15 +901,14 @@ hr.line.align-right {
     margin-right: 20px;
 }
 
-.widget.twitter .twitter-profile-pic img {
-  box-shadow: 3px 3px 0px rgba(50, 50, 50, 0.5);
+.widget.twitter .twitter-profile-pic a {
+  border-bottom: 0;
+  padding-bottom: 0;
 }
 
 .widget.twitter .twitter-content span.bk-full-name {
     font-family: @font-swatch4-font-family;
     color: @color-swatch3;
-    font-size: @font-swatch4-font-size;
-    font-weight: bold;
 }
 
 /* ===============================
