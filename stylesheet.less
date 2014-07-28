@@ -266,10 +266,9 @@ list-style-type: square;
   position: relative;
   background-color: transparent;
   width: 50%;
-}
-
-.widget.extendednavigation a.pull {
-  display: none;
+  @media @tablet {
+    float: none;
+  }
 }
 
 .widget.extendednavigation ul {
@@ -1786,7 +1785,7 @@ width: 100%;
     display: block;
     width: 100%;
     position: absolute;
-    top: -60px;
+    top: 30px;
   }
 
     .widget .extendednavigation a.pull:after {
@@ -1815,7 +1814,7 @@ width: 100%;
     margin: 0;
   }
 .widget.extendednavigation ul li, .widget.extendednavigation ul li.folder, .widget.extendednavigation ul li.folder:hover {
-  padding: 1em 0;
+  padding: 0.3em 0;
 }
 
 
