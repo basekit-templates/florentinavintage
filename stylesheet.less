@@ -771,7 +771,7 @@ hr.line.align-right {
     background-repeat: no-repeat;
     background-position: right center;
     cursor: pointer;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* ===============================
@@ -784,7 +784,7 @@ div.twitter-profile-pic {
 }
 
 .widget.twitter a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .widget.twitter ul {
@@ -1073,7 +1073,7 @@ div.twitter-profile-pic {
 }
 
 .widget.profile .twitter a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .widget.profile .twitter {
@@ -1247,7 +1247,7 @@ footer {
             webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
             box-sizing: border-box;
-            border: 1px solid lighten(@color-swatch2, 40%);
+            border: 1px solid darken(@color-swatch2, 10%);
             background-color: @color-swatch1;
             padding: 8px 38px 8px 14px;
             text-indent: 0;
@@ -1272,8 +1272,11 @@ footer {
 }
 
 .widget.ecombasket .ecombasket-pull {
-    border-radius: 5px;
-    box-shadow: 0px 2px 0px darken(@color-swatch3,10%);
+    border-radius: 0;
+    border: none;
+    -webkit-box-shadow: 3px 3px 0px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow: 3px 3px 0px rgba(50, 50, 50, 0.5);
+    box-shadow: 3px 3px 0px rgba(50, 50, 50, 0.5);
 }
 
 .ecom-product-preview-image-wrap {
@@ -1281,7 +1284,7 @@ footer {
 }
 
 .btn {
-    padding: 3px 14px;
+    padding: 7px 14px;
     margin: 0;
     border: none;
     -webkit-box-shadow: 3px 3px 0px rgba(50, 50, 50, 0.5);
@@ -1497,7 +1500,7 @@ footer {
             letter-spacing: @font-swatch2-letter-spacing;
             text-decoration: none;
             &:hover {
-                text-decoration: underline;
+                text-decoration: none;
             }
         }
     }
@@ -1563,7 +1566,7 @@ width: 100%;
                     letter-spacing: @font-swatch6-letter-spacing;
                     &:hover {
                         color: @color-swatch5;
-                        text-decoration: underline;
+                        text-decoration: none;
                     }
                 }
         }
