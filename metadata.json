@@ -3,6 +3,7 @@
 	"thumbnail":"florentinavintage.png",
 	"screenshot":"florentinavintage.png",
 	"templateType":"standard",
+    "pageTypes":["home"],
     "tags": {
     "en": ["colorful", "bright", "modeling", "vintage", "colourful", "retail", "retro", "pattern", "texture", "hipster", "creative", "serif"],
     "es": ["colorido", "claro", "glamour", "vintage", "minorista", "retro", "patron", "textura", "hipster", "creativo", "serif"],
