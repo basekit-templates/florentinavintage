@@ -170,6 +170,9 @@ list-style-type: square;
 
 .widget.logo {
   margin-right: 10px;
+  .logo, img, a {
+    line-height: 0;
+  }
 }
 
 /* ===============================
@@ -249,11 +252,17 @@ list-style-type: square;
     position: relative;
     @media @tablet {
         width: 100%;
+        min-height: 40px;
     }
 }
 
 .widget.extendednavigation a.pull {
   top: 0;
+  right: -7px;
+  &:after {
+    right: 7px;
+    top: 12px;
+  }
   @media @tablet {
     top: 0;
   }
@@ -261,7 +270,7 @@ list-style-type: square;
 
 .widget.extendednavigation ul.open {
     @media @tablet {
-        margin-top: 20px;
+        margin-top: 40px;
     }
 }
 
