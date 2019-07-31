@@ -4,6 +4,7 @@
 	"screenshot":"florentinavintage-screenshot.jpg",
 	"templateType":"standard",
     "pageTypes":["home"],
+    "versionTenCompatible": 1,
     "tags": {
     "en": ["colorful", "bright", "modeling", "vintage", "colourful", "retail", "retro", "pattern", "texture", "hipster", "creative", "serif"],
     "es": ["colorido", "claro", "glamour", "vintage", "minorista", "retro", "patron", "textura", "hipster", "creativo", "serif"],

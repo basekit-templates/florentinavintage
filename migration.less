@@ -1,0 +1,70 @@
+
+#migrated-site {
+    
+
+
+
+    //  Template - Stylesheet overrides
+    // ---------------------------------
+
+
+    .canvas,
+    .main {
+        padding: 0;
+    }
+
+    .main.wrapper {
+        margin: 0;
+        width: 100%;
+    }
+
+
+
+
+    //  Migration - Container & Spacing
+    // -----------------------------------
+
+
+    // Readds wrapper values to widgets that aren't sections
+    .empty-zone,
+    #page-zones__main:empty,
+    .canvas,
+    #page-zones__main > .widget:not(.row),
+    .row:not(.widget):not(.row--width-no-padding) .row__container {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 960px;
+        width: 90%;
+    }
+
+
+    // Move spacing to first widget in the main zone (not sections)
+    .edit #page-zones__main-overlay + .widget:not(.row),
+    #page-zones__main > .widget:not(.row):first-child {
+        margin-top: 40px;
+    }
+
+
+    // Move spacing to last widget in the main zone (not sections)
+    #page-zones__main > .widget:not(.row):last-child {
+        margin-bottom: 40px;
+    }
+
+
+    // Adds spacing to a widget when a section follows it
+    #page-zones__main > .row + .widget:not(.row),
+    #page-zones__main > .widget:not(.row) + .row {
+        margin-top: 20px;
+    }
+
+
+
+
+    //  Migration - Editor UI
+    // -----------------------------------
+
+    
+    ul.widget__list {
+        background-color: transparent;
+    }
+}
